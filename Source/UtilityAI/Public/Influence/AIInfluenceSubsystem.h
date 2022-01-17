@@ -41,8 +41,4 @@ public:
 
     FAIInfluenceQueryResult
     RunQuery(const FAIInfluenceQueryParams& Params) const;
-
-    UFUNCTION(Exec)
-    void
-    TestInfluenceOctree();
 };
