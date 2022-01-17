@@ -1,4 +1,5 @@
 /Intermediate/**/*
+/Binaries/**/*
 !*/
 
 # Do not ignore git files in the root of the repo.

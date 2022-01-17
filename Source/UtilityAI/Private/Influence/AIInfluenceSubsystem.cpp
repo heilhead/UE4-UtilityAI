@@ -1,7 +1,5 @@
 ﻿#include "Influence/AIInfluenceSubsystem.h"
-
 #include "DrawDebugHelpers.h"
-#include "UtilityAILog.h"
 
 void
 UAIInfluenceSubsystem::Initialize(FSubsystemCollectionBase& Collection)
@@ -20,23 +18,23 @@ UAIInfluenceSubsystem::Deinitialize()
     Super::Deinitialize();
 }
 
-void
-UAIInfluenceSubsystem::Tick(float DeltaTime)
-{
-    if (InfluenceOctree) {
-        const UWorld* World = GetWorld();
-        InfluenceOctree->FindAllElements([=](const auto& Element) {
-            const FBox Box = Element.Bounds.GetBox();
-            DrawDebugBox(World, Box.GetCenter(), Box.GetExtent(), FColor::Green, false, -1.f, 0, 5.f);
-        });
-    }
-}
+// void
+// UAIInfluenceSubsystem::Tick(float DeltaTime)
+// {
+//     if (InfluenceOctree) {
+//         const UWorld* World = GetWorld();
+//         InfluenceOctree->FindAllElements([=](const auto& Element) {
+//             const FBox Box = Element.Bounds.GetBox();
+//             DrawDebugBox(World, Box.GetCenter(), Box.GetExtent(), FColor::Green, false, -1.f, 0, 5.f);
+//         });
+//     }
+// }
 
-TStatId
-UAIInfluenceSubsystem::GetStatId() const
-{
-    RETURN_QUICK_DECLARE_CYCLE_STAT(UAIInfluenceSubsystem, STATGROUP_Tickables);
-}
+// TStatId
+// UAIInfluenceSubsystem::GetStatId() const
+// {
+//     RETURN_QUICK_DECLARE_CYCLE_STAT(UAIInfluenceSubsystem, STATGROUP_Tickables);
+// }
 
 bool
 UAIInfluenceSubsystem::DoesSupportWorldType(EWorldType::Type WorldType) const

@@ -4,7 +4,7 @@
 #include "AIInfluenceSubsystem.generated.h"
 
 UCLASS()
-class UTILITYAI_API UAIInfluenceSubsystem : public UTickableWorldSubsystem {
+class UTILITYAI_API UAIInfluenceSubsystem : public UWorldSubsystem {
     GENERATED_BODY()
 
 public:
@@ -17,11 +17,11 @@ public:
     virtual void
     Deinitialize() override;
 
-    virtual void
-    Tick(float DeltaTime) override;
+    // virtual void
+    // Tick(float DeltaTime) override;
 
-    virtual TStatId
-    GetStatId() const override;
+    // virtual TStatId
+    // GetStatId() const override;
 
     virtual bool
     DoesSupportWorldType(EWorldType::Type WorldType) const override;
